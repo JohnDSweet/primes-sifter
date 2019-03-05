@@ -5,20 +5,20 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Factorial</title>
+    <title>Palindrome</title>
   </head>
   <body>
     <div class="container">
-      <h1>Factorial Calculator</h1>
-      <form id="factorial">
+      <h1>Is it a Palindrome?</h1>
+      <form id="pal">
         <div class="form-group">
-          <label for="factorial-input">Enter a number and receive its factorial:</label>
-          <input type="text" id="factorial-input">
+          <label for="pal-input">Enter a word and find out if it is a palindrome:</label>
+          <input type="text" id="pal-input">
         </div>
-        <button type="submit" class="btn">Calculate!</button>
+        <button type="submit" class="btn">Find out!</button>
       </form>
       <div id="result">
-        <p> The factorial of <span class="factorial"></span> is <span class="result"></span>.</p>
+        <p><span class="pal"></span> is <span class="not"></span> a palindrome.</p>
       </div>
     </div>
   </body>

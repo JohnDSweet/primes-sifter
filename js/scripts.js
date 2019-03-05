@@ -1,19 +1,26 @@
-var total = 1;
-var calculateFactorial = function(index) {
-  for (var index; index > 0; index -= 1) {
-    total *= index;
+var palCalc = function(index) {
+  var regStr = index.join();
+  var reverseStr = index.reverse().join();
+  if (regStr === reverseStr) {
+    return true;
+  } else {
+    return false;
   }
-};
-
+}
 
 $(document).ready(function() {
-  $("form#factorial").submit(function(event) {
+  $("form#pal").submit(function(event) {
     event.preventDefault();
-    var factorial = parseInt($("input#factorial-input").val());
-    var result = calculateFactorial(factorial);
-    $(".factorial").text(factorial);
+    var input = ($("input#pal-input").val());
+    var palInput = input.split('')
+    var result = palCalc(palInput);
 
-      $(".result").text(total);
+    $(".pal").text(input);
+    if (result === true) {
+      $(".not").text(" ");
+    } else {
+      $(".not").text("not");
+    }
 
     $("#result").show();
   });
